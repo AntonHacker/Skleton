@@ -106,7 +106,7 @@
             this.skeletonsHealth.Size = new System.Drawing.Size(178, 20);
             this.skeletonsHealth.TabIndex = 5;
             this.skeletonsHealth.Text = "Skeleton Health: 100";
-            this.skeletonsHealth.Click += new System.EventHandler(this.skeletonsHealth_Click);
+//            this.skeletonsHealth.Click += new System.EventHandler(this.skeletonsHealth_Click);
             // 
             // MainForm
             // 

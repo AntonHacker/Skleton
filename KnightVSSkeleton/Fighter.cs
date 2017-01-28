@@ -21,6 +21,7 @@ namespace KnightVSSkeleton
         {
         Random random = new Random();
         return random.Next(1, 10);
+        
         }
         
         public void ReceiveDamage(int howMuchDamage)

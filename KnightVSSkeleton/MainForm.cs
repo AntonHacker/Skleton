@@ -30,34 +30,48 @@ namespace KnightVSSkeleton
         /// <summary>
         /// После того, как рыцарь и скелет проивзаимодействовали, нужно обновить их здоровье и картинки
         /// </summary>
-        public void Update_All()
+        public async void Update_All()
         {
-            throw new System.NotImplementedException();
+
+            skeletonsHealth.Text = Skeleton.TellHealth().ToString();
+            knightsHealth.Text = Knight.TellHealth().ToString();
+
+            if (Skeleton.IsDead() || Knight.IsDead())
+
+            {
+                button1.Enabled = false;
+                if (Skeleton.IsDead()) MessageBox.Show("Winner Knight ", "Game Over!");
+                else MessageBox.Show("Winner Skeleton", "Game Over!");
+                await Task.Delay(900);
+                Skeleton = new Fighter(skeletonPictureBox);
+                Knight = new Fighter(knightPictureBox);
+                skeletonsHealth.Text = Skeleton.TellHealth().ToString();
+                knightsHealth.Text = Knight.TellHealth().ToString();
+                skeletonAttacks.Enabled = true;
+                button1.Enabled = true;
+                skeletonPictureBox.Image = Image.FromFile(@"E:\Anton Hacker\KnightVSSkeleton-master\KnightVSSkeleton-master\Assets\Skeleton_idle.gif");
+                knightPictureBox.Image = Image.FromFile(@"E:\Anton Hacker\KnightVSSkeleton-master\KnightVSSkeleton-master\Assets\Knight_idle.gif");
+            }
+            }
+
+
+        private  void button1_Click(object sender, EventArgs e)
+        {
+            Skeleton.ReceiveDamage(Knight.MakeDamage());
+            Update_All();
+
+          
         }
 
         private void skeletonAttacks_Click(object sender, EventArgs e)
         {
             Knight.ReceiveDamage(Skeleton.MakeDamage());
-            knightsHealth.Text = Knight.TellHealth().ToString();
-            if (Knight.IsDead())
-            {
-            skeletonAttacks.Enabled = false;
-            }
-        }
-        
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Skeleton.ReceiveDamage(Knight.MakeDamage());
-            skeletonsHealth.Text = Skeleton.TellHealth().ToString();
-            if (Skeleton.IsDead())
-            {
-            button1.Enabled = false;
-            }      
+            Update_All();
         }
 
-        private void skeletonsHealth_Click(object sender, EventArgs e)
-        {
-        
-        }
     }
 }
+   
+
+
+       
