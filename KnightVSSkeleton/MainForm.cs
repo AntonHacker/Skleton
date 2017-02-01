@@ -13,12 +13,12 @@ namespace KnightVSSkeleton
     public partial class MainForm : Form
 
     {
-        Fighter Knight;
+        Knight Knight;
         Fighter Skeleton;
         public MainForm()
         {
             InitializeComponent();
-            Knight = new Fighter(knightPictureBox);
+            Knight = new Knight(knightPictureBox);
             Skeleton = new Fighter(skeletonPictureBox);
         }
 
@@ -44,7 +44,7 @@ namespace KnightVSSkeleton
                 else MessageBox.Show("Winner Skeleton", "Game Over!");
                 await Task.Delay(900);
                 Skeleton = new Fighter(skeletonPictureBox);
-                Knight = new Fighter(knightPictureBox);
+                Knight = new Knight(knightPictureBox);
                 skeletonsHealth.Text = Skeleton.TellHealth().ToString();
                 knightsHealth.Text = Knight.TellHealth().ToString();
                 skeletonAttacks.Enabled = true;

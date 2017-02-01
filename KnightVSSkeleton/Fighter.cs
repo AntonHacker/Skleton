@@ -11,7 +11,7 @@ namespace KnightVSSkeleton
     public class Fighter
     {
        private int health;
-       PictureBox sprite;
+       protected PictureBox sprite;
        public Fighter (PictureBox sprite)
         {
        this.sprite = sprite;
@@ -38,7 +38,7 @@ namespace KnightVSSkeleton
             return health;
         }
         
-        private async void Die()
+        protected virtual async void Die()
         {
             sprite.Image = Image.FromFile(@"E:\Anton Hacker\KnightVSSkeleton-master\KnightVSSkeleton-master\Assets\Skeleton_Death.gif");
             await Task.Delay(1000);
