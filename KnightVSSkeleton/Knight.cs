@@ -10,7 +10,11 @@ namespace KnightVSSkeleton
 {
     class Knight : Fighter
     {
-    public Knight (PictureBox sprite) : base(sprite)
+        public Knight(PictureBox skeletonPictureBox) : base(skeletonPictureBox)
+        {
+        }
+
+        public Knight (PictureBox sprite, Weapons MyWeapon) : base(sprite, MyWeapon) 
         {
         
         }
@@ -21,9 +25,9 @@ namespace KnightVSSkeleton
             await Task.Delay(1000);
             sprite.Enabled = false;
         }
-
-
-    }
+        
 
     }
+     
+}
 

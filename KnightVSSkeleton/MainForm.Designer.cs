@@ -43,7 +43,7 @@
             // 
             this.skeletonPictureBox.Image = global::KnightVSSkeleton.Properties.Resources.Skeleton_Idle;
             this.skeletonPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("skeletonPictureBox.InitialImage")));
-            this.skeletonPictureBox.Location = new System.Drawing.Point(208, 7);
+            this.skeletonPictureBox.Location = new System.Drawing.Point(208, -2);
             this.skeletonPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.skeletonPictureBox.Name = "skeletonPictureBox";
             this.skeletonPictureBox.Size = new System.Drawing.Size(164, 163);
@@ -62,6 +62,7 @@
             this.knightPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.knightPictureBox.TabIndex = 0;
             this.knightPictureBox.TabStop = false;
+            this.knightPictureBox.Click += new System.EventHandler(this.knightPictureBox_Click);
             // 
             // button1
             // 
@@ -106,7 +107,6 @@
             this.skeletonsHealth.Size = new System.Drawing.Size(178, 20);
             this.skeletonsHealth.TabIndex = 5;
             this.skeletonsHealth.Text = "Skeleton Health: 100";
-//            this.skeletonsHealth.Click += new System.EventHandler(this.skeletonsHealth_Click);
             // 
             // MainForm
             // 

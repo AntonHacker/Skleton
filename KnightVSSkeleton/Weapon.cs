@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace KnightVSSkeleton
 {
-    class Weapon
+   public class Weapons
     {
+        public int MaxDamage;
+        public int MinDamage;
     }
+   
+
 }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,17 +9,26 @@ namespace KnightVSSkeleton
     {
        private int health;
        protected PictureBox sprite;
-       public Fighter (PictureBox sprite)
+        private PictureBox skeletonPictureBox;
+        Weapons Myweapon;
+
+        public Fighter (PictureBox sprite,Weapons Myweapon)
         {
+       this.Myweapon = Myweapon;
        this.sprite = sprite;
        this.health = 100;
         }
+
+        public Fighter(PictureBox skeletonPictureBox)
+        {
+            this.skeletonPictureBox = skeletonPictureBox;
+        }
+
         public int MakeDamage() 
         {
         Random random = new Random();
         return random.Next(1, 10);
-        
-        }
+         }
         
         public void ReceiveDamage(int howMuchDamage)
         {
@@ -50,11 +56,11 @@ namespace KnightVSSkeleton
             if (health <= 0) return true;
             else return false;
         }
+        
       
-         
  
         }
-
+        
     
     
       

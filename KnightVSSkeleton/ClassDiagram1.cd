@@ -11,8 +11,43 @@
       <Method Name="MainForm_Load" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAABAAACAABAAAAACAEAACAAAMAAAAAAAkgAAAAAA=</HashCode>
+      <HashCode>gEAAABAAACEABAAQAACAEAACAAAMAAAAAEAkgAAAQAA=</HashCode>
       <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnightVSSkeleton.Knight">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="KnightVSSkeleton.Fighter" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="1.286" />
+        <Point X="4.25" Y="1.25" />
+        <Point X="4.5" Y="1.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Knight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnightVSSkeleton.Weapons">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnightVSSkeleton.Program">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnightVSSkeleton.Fighter">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAgAAAAgAAAAEQAAQBAAAAAAAAAEAAAAAAg=</HashCode>
+      <FileName>Fighter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
